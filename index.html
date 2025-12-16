@@ -15,10 +15,9 @@
     nav {
       width: 250px;
       height: 100vh;
-      background-color: #c1a2bd;
+      background-color: #1e293b;
       padding: 20px;
       position: fixed;
-      overflow-y: auto;
     }
 
     nav h1 {
@@ -36,37 +35,35 @@
       color: white;
       text-align: left;
       padding: 10px;
-      margin: 10px 0;
-      cursor: pointer;
+      margin: 12px 0;
       border-radius: 5px;
-      font-size: 15px;}
+      cursor: pointer;
+      font-size: 15px;
+    }
 
-    nav a:hover {
-      background-color: #8f9cae;
+    nav button:hover {
+      background-color: #334155;
     }
 
     /* RIGHT CONTENT */
     main {
       margin-left: 270px;
-      padding: 30px;
+      padding: 40px;
       width: calc(100% - 270px);
     }
 
-    content-box {
-    display: none;
-    background: #f8fafc;
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .content-box {
+      display: none;
+      margin-bottom: 60px;
     }
 
-   .content-box.active {
-   display: block;
-   }
+    .content-box.active {
+      display: block;
+    }
 
-    section h2 {
-      border-bottom: 2px solid #05abf2;
-      padding-bottom: 6px;
+    .content-box h2 {
+      border-bottom: 2px solid #38bdf8;
+      padding-bottom: 5px;
     }
   </style>
 </head>
@@ -76,69 +73,79 @@
   <!-- LEFT DOCUMENTATION MENU -->
   <nav>
     <h1>Documentation Menu</h1>
-    <a href="#creator">Introduction of the Creator</button>
-    <a href="#html">What is HTML?</button>
-    <a href="#css">What is Cascading Style Sheet?</button>
-    <a href="#js">What is JavaScript?</button>
-    <a href="#survey">How to Create a Survey Form</button>
+    <button onclick="showContent('creator')">Introduction of the Creator</button>
+    <button onclick="showContent('html')">What is HTML?</button>
+    <button onclick="showContent('css')">What is Cascading Style Sheet?</button>
+    <button onclick="showContent('js')">What is JavaScript?</button>
+    <button onclick="showContent('survey')">How to Create a Survey Form</button>
   </nav>
 
   <!-- RIGHT CONTENT SECTION -->
   <main>
 
-    <section id="creator">
+    <div id="creator" class="content-box active">
       <h2>Introduction of the Creator of the Webpage</h2>
       <p>
         My name is <strong>Alliahj Steele</strong>, and I am the developer of this
-        Technical Documentation Webpage. I'm currently completing my Associates Degree in Information Technology.
-        My next academic goal is to complete my Bachelors degree in Data Science. This project is vital in demonstrating my foundational
-        knowledge of HTML structure, layout design, and navigation using anchor links. 
+        Technical Documentation Webpage. I'm currently completing my Associate Degree in Information Technology.
+        My next academic goal is to complete my Bachelor’s degree in Data Science.
       </p>
-    </section>
+      <p>
+        This project is vital in demonstrating my foundational knowledge of HTML structure,
+        layout design, and basic web interactivity using JavaScript.
+      </p>
+    </div>
 
-    <section id="html">
+    <div id="html" class="content-box">
       <h2>What is HTML?</h2>
       <p>
-        HTML stands for HyperText Markup Language. Its a standard a language used to for creating Web pages , invented 
-        by Tim Berners-Lee in the 1989. It is now widely used as building block for website.
-        HTML uses tags to provide information such as headings, paragraphs, images, and links.
+        HTML stands for <strong>HyperText Markup Language</strong>. It is the standard language used
+        for creating web pages and was invented by Tim Berners-Lee in 1989.
       </p>
-    </section>
+      <p>
+        HTML is the building block of websites and uses tags to structure content such as
+        headings, paragraphs, images, and links.
+      </p>
+    </div>
 
-    <section id="css">
+    <div id="css" class="content-box">
       <h2>What is Cascading Style Sheet?</h2>
       <p>
-        CSS is used to control the appearance of HTML elements, including colors,
-        fonts, spacing, and layout. This is often added to enhance the creativity of an HTML document. 
-        Which can be done three methods , such as internal , external and inline styles.
+        Cascading Style Sheets (CSS) is used to control the visual appearance of HTML elements,
+        including colors, fonts, spacing, and layout.
       </p>
-    </section>
+      <p>
+        CSS can be applied in three ways: inline styles, internal styles, and external style sheets,
+        allowing developers to enhance creativity and consistency across webpages.
+      </p>
+    </div>
 
-    <section id="js">
+    <div id="js" class="content-box">
       <h2>What is JavaScript?</h2>
       <p>
-        JavaScript is a programming language that adds interactivity and dynamic
-        behavior to webpages.It makes your website more engaging and useful.
+        JavaScript is a programming language that adds interactivity and dynamic behavior to webpages.
+        It makes websites more engaging and useful by responding to user actions.
       </p>
-    </section>
+    </div>
 
-    <section id="survey">
+    <div id="survey" class="content-box">
       <h2>How to Create a Survey Form</h2>
       <p>
-        HTML forms are created using the &lt;form&gt; element along with input fields
-        such as text boxes, radio buttons, and submit buttons.
+        HTML survey forms are created using the <code>&lt;form&gt;</code> element along with
+        input fields such as text boxes, radio buttons, checkboxes, and submit buttons.
       </p>
-    </section>
+    </div>
 
   </main>
-<!-- JAVASCRIPT -->
-<script>
-function showContent(id) {
-const sections = document.querySelectorAll('.content-box');
-sections.forEach(section => section.classList.remove('active'));
-document.getElementById(id).classList.add('active');
-}
-</script>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    function showContent(id) {
+      const sections = document.querySelectorAll('.content-box');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>

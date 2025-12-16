@@ -15,7 +15,7 @@
     nav {
       width: 250px;
       height: 100vh;
-      background-color: #1e293b;
+      background-color: #c1a2bd;
       padding: 20px;
       position: fixed;
       overflow-y: auto;
@@ -28,32 +28,45 @@
       margin-bottom: 20px;
     }
 
-    nav a {
+    nav button {
       display: block;
+      width: 100%;
+      background: none;
+      border: none;
       color: white;
-      text-decoration: none;
-      margin: 12px 0;
-      padding: 8px;
+      text-align: left;
+      padding: 10px;
+      margin: 10px 0;
+      cursor: pointer;
       border-radius: 5px;
-    }
+      font-size: 15px;}
 
     nav a:hover {
-      background-color: #334155;
+      background-color: #8f9cae;
     }
 
     /* RIGHT CONTENT */
     main {
       margin-left: 270px;
       padding: 30px;
+      width: calc(100% - 270px);
     }
 
-    section {
-      margin-bottom: 60px;
+    content-box {
+    display: none;
+    background: #f8fafc;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+
+   .content-box.active {
+   display: block;
+   }
 
     section h2 {
-      border-bottom: 2px solid #38bdf8;
-      padding-bottom: 5px;
+      border-bottom: 2px solid #05abf2;
+      padding-bottom: 6px;
     }
   </style>
 </head>
@@ -63,11 +76,11 @@
   <!-- LEFT DOCUMENTATION MENU -->
   <nav>
     <h1>Documentation Menu</h1>
-    <a href="#creator">Introduction of the Creator</a>
-    <a href="#html">What is HTML?</a>
-    <a href="#css">What is Cascading Style Sheet?</a>
-    <a href="#js">What is JavaScript?</a>
-    <a href="#survey">How to Create a Survey Form</a>
+    <a href="#creator">Introduction of the Creator</button>
+    <a href="#html">What is HTML?</button>
+    <a href="#css">What is Cascading Style Sheet?</button>
+    <a href="#js">What is JavaScript?</button>
+    <a href="#survey">How to Create a Survey Form</button>
   </nav>
 
   <!-- RIGHT CONTENT SECTION -->
@@ -118,6 +131,14 @@
     </section>
 
   </main>
+<!-- JAVASCRIPT -->
+<script>
+function showContent(id) {
+const sections = document.querySelectorAll('.content-box');
+sections.forEach(section => section.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
 
 </body>
 </html>

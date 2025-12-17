@@ -11,7 +11,6 @@
       display: flex;
     }
 
-    /* LEFT MENU */
     nav {
       width: 250px;
       height: 100vh;
@@ -45,7 +44,6 @@
       background-color: #334155;
     }
 
-    /* RIGHT CONTENT */
     main {
       margin-left: 270px;
       padding: 40px;
@@ -70,130 +68,134 @@
 
 <body>
 
-  <!-- LEFT DOCUMENTATION MENU -->
-  <nav>
-    <h1>Documentation Menu</h1>
-    <button onclick="showContent('creator')">Introduction of the Creator</button>
-    <button onclick="showContent('html')">What is HTML?</button>
-    <button onclick="showContent('css')">What is Cascading Style Sheet?</button>
-    <button onclick="showContent('js')">What is JavaScript?</button>
-    <button onclick="showContent('survey')">How to Create a Survey Form</button>
-  </nav>
+<nav>
+  <h1>Documentation Menu</h1>
+  <button onclick="showContent('creator')">Introduction of the Creator</button>
+  <button onclick="showContent('html')">What is HTML?</button>
+  <button onclick="showContent('css')">What is Cascading Style Sheet?</button>
+  <button onclick="showContent('js')">What is JavaScript?</button>
+  <button onclick="showContent('survey')">How to Create a Survey Form</button>
+</nav>
 
-  <!-- RIGHT CONTENT SECTION -->
-  <main>
+<main>
 
-    <div id="creator" class="content-box active">
-      <h2>Introduction of the Creator of the Webpage</h2>
+  <!-- CREATOR -->
+  <div id="creator" class="content-box active">
+    <h2>Introduction of the Creator of the Webpage</h2>
 
-      <!-- PROFILE IMAGE -->
-      <img 
-        src="/Technical-Documentation/assets/images/profile.jpg"
-        alt="Photo of Alliahj Steele"
-        width="180"
-        style="border-radius:10px; margin:15px 0;"
-      >
+    <img src="assets/images/profile.jpg"
+         alt="Photo of Alliahj Steele"
+         width="180"
+         style="border-radius:10px; margin:15px 0;">
 
-      <p>
-        My name is <strong>Alliahj Steele</strong>, and I am the developer of this
-        Technical Documentation Webpage. I'm currently completing my Associate Degree in Information Technology.
-        My next academic goal is to complete my Bachelor’s degree in Data Science.
-      </p>
+    <p>
+      My name is <strong>Alliahj Steele</strong>, and I am the developer of this Technical Documentation Webpage.
+      I am currently completing my Associate Degree in Information Technology and plan to pursue a Bachelor’s
+      degree in Data Science.
+    </p>
 
-      <p>
-        This project demonstrates my foundational knowledge of HTML structure,
-        CSS styling, and JavaScript-based interactivity through dynamic content loading.
-      </p>
+    <p>
+      This project demonstrates my understanding of HTML structure, CSS styling, and JavaScript-based
+      interactivity using dynamic content loading.
+    </p>
 
-      <!-- RESUME LINK -->
-      <p>
-        <a href="/Technical-Documentation/assets/docs/resume.pdf" target="_blank">
-          View My Résumé (Assignment 1)
-        </a>
-      </p>
-    </div>
+    <p>
+      <a href="resume.html" target="_blank">View My Résumé (Assignment 1)</a>
+    </p>
+  </div>
 
-    <div id="html" class="content-box">
-      <h2>What is HTML?</h2>
-      <p>
-        HTML stands for <strong>HyperText Markup Language</strong>. It is the standard language used
-        for creating web pages and was invented by Tim Berners-Lee in 1989.
-      </p>
-      <p>
-        HTML is the building block of websites and uses tags to structure content such as
-        headings, paragraphs, images, and links.
-      </p>
-    </div>
+  <!-- HTML -->
+  <div id="html" class="content-box">
+    <h2>What is HTML?</h2>
 
-    <div id="css" class="content-box">
-      <h2>What is Cascading Style Sheet?</h2>
-      <p>
-        Cascading Style Sheets (CSS) controls the visual appearance of HTML elements,
-        including colors, fonts, spacing, and layout.
-      </p>
-      <p>
-        CSS can be applied using inline styles, internal style sheets, or external style sheets.
-      </p>
-    </div>
+    <p>
+      HTML stands for <strong>HyperText Markup Language</strong>. It is the standard language used to create
+      webpages and was invented by Tim Berners-Lee in 1989.
+    </p>
 
-    <div id="js" class="content-box">
-      <h2>What is JavaScript?</h2>
-      <p>
-        JavaScript adds interactivity and dynamic behavior to webpages,
-        allowing websites to respond to user actions.
-      </p>
-    </div>
+    <p>
+      HTML uses elements called <em>tags</em> to structure content such as headings, paragraphs, images,
+      links, and forms. It is the foundation of all websites.
+    </p>
 
-    <div id="survey" class="content-box">
-      <h2>How to Create a Survey Form</h2>
-      <p>
-       <h3>Step-by-Step Guide to Creating a Survey Form</h3>
+    <p>
+      Example of a real HTML-based website:
+      <a href="https://www.w3schools.com/html/" target="_blank">
+        W3Schools HTML Tutorial
+      </a>
+    </p>
+  </div>
 
-<ol>
-  <li>Start by using the <code>&lt;form&gt;</code> tag to create the form container.</li>
-  <li>Use <code>&lt;label&gt;</code> elements to describe each input field.</li>
-  <li>Add text input fields for Name, Email, and Age using <code>&lt;input&gt;</code>.</li>
-  <li>Use radio buttons to allow users to select one option.</li>
-  <li>Include a submit button to send the form data.</li>
-</ol>
+  <!-- CSS -->
+  <div id="css" class="content-box">
+    <h2>What is Cascading Style Sheet?</h2>
 
-      </p>
+    <p>
+      Cascading Style Sheets (CSS) control the visual appearance of HTML elements, including layout,
+      colors, fonts, and spacing.
+    </p>
 
-      <form style="max-width:400px;">
+    <p>
+      CSS can be applied using inline styles, internal style sheets, or external style sheets.
+    </p>
+  </div>
 
-  <label>Name:</label><br>
-  <input type="text" placeholder="Enter your name"><br><br>
+  <!-- JS -->
+  <div id="js" class="content-box">
+    <h2>What is JavaScript?</h2>
 
-  <label>Email:</label><br>
-  <input type="email" placeholder="Enter your email address"><br><br>
+    <p>
+      JavaScript is a programming language that adds interactivity and dynamic behavior to webpages.
+      It allows websites to respond to user actions.
+    </p>
+  </div>
 
-  <label>Age:</label><br>
-  <input type="number" placeholder="Enter your age"><br><br>
+  <!-- SURVEY -->
+  <div id="survey" class="content-box">
+    <h2>How to Create a Survey Form</h2>
 
-  <label>Which option best describes you?</label><br>
-  <input type="radio" name="role"> Student<br><br>
+    <h3>Step-by-Step Guide</h3>
 
-  <label>Would you recommend my Webpage/Website to a friend?</label><br>
-  <input type="radio" name="recommend"> Yes<br>
-  <input type="radio" name="recommend"> No<br>
-  <input type="radio" name="recommend"> Maybe<br><br>
+    <ol>
+      <li>Create a form using the <code>&lt;form&gt;</code> tag.</li>
+      <li>Use labels to describe input fields.</li>
+      <li>Add inputs for name, email, and age.</li>
+      <li>Use radio buttons for selections.</li>
+      <li>Include a submit button.</li>
+    </ol>
 
-  <button type="submit">Submit</button>
+    <form style="max-width:400px;">
+      <label>Name:</label><br>
+      <input type="text" placeholder="Enter your name"><br><br>
 
-</form>
+      <label>Email:</label><br>
+      <input type="email" placeholder="Enter your email address"><br><br>
 
-    </div>
+      <label>Age:</label><br>
+      <input type="number" placeholder="Enter your age"><br><br>
 
-  </main>
+      <label>Which option best describes you?</label><br>
+      <input type="radio" name="role"> Student<br><br>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    function showContent(id) {
-      const sections = document.querySelectorAll('.content-box');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-  </script>
+      <label>Would you recommend my Webpage/Website to a friend?</label><br>
+      <input type="radio" name="recommend"> Yes<br>
+      <input type="radio" name="recommend"> No<br>
+      <input type="radio" name="recommend"> Maybe<br><br>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+</main>
+
+<script>
+  function showContent(id) {
+    document.querySelectorAll('.content-box').forEach(section => {
+      section.classList.remove('active');
+    });
+    document.getElementById(id).classList.add('active');
+  }
+</script>
 
 </body>
 </html>

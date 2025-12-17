@@ -147,9 +147,41 @@
     <div id="survey" class="content-box">
       <h2>How to Create a Survey Form</h2>
       <p>
-        Survey forms are created using the <code>&lt;form&gt;</code> element with inputs such as
-        text fields, radio buttons, checkboxes, and submit buttons.
+       <h3>Step-by-Step Guide to Creating a Survey Form</h3>
+
+<ol>
+  <li>Start by using the <code>&lt;form&gt;</code> tag to create the form container.</li>
+  <li>Use <code>&lt;label&gt;</code> elements to describe each input field.</li>
+  <li>Add text input fields for Name, Email, and Age using <code>&lt;input&gt;</code>.</li>
+  <li>Use radio buttons to allow users to select one option.</li>
+  <li>Include a submit button to send the form data.</li>
+</ol>
+
       </p>
+
+      <form style="max-width:400px;">
+
+  <label>Name:</label><br>
+  <input type="text" placeholder="Enter your name"><br><br>
+
+  <label>Email:</label><br>
+  <input type="email" placeholder="Enter your email address"><br><br>
+
+  <label>Age:</label><br>
+  <input type="number" placeholder="Enter your age"><br><br>
+
+  <label>Which option best describes you?</label><br>
+  <input type="radio" name="role"> Student<br><br>
+
+  <label>Would you recommend my Webpage/Website to a friend?</label><br>
+  <input type="radio" name="recommend"> Yes<br>
+  <input type="radio" name="recommend"> No<br>
+  <input type="radio" name="recommend"> Maybe<br><br>
+
+  <button type="submit">Submit</button>
+
+</form>
+
     </div>
 
   </main>

@@ -106,49 +106,136 @@
 
   <!-- HTML -->
   <div id="html" class="content-box">
-    <h2>What is HTML?</h2>
+  <h2>What is HTML?</h2>
 
-    <p>
-      HTML stands for <strong>HyperText Markup Language</strong>. It is the standard language used to create
-      webpages and was invented by Tim Berners-Lee in 1989.
-    </p>
+  <p>
+    HTML, which stands for <strong>HyperText Markup Language</strong>, is the standard language used
+    to create and structure webpages. It was developed by Tim Berners-Lee in 1989 and is considered
+    the foundation of the World Wide Web. Every website, regardless of how advanced or interactive
+    it may appear, begins with HTML.
+  </p>
 
-    <p>
-      HTML uses elements called <em>tags</em> to structure content such as headings, paragraphs, images,
-      links, and forms. It is the foundation of all websites.
-    </p>
+  <p>
+    HTML works by using elements known as <em>tags</em> to define different types of content.
+    These tags tell the browser how to display information such as headings, paragraphs, images,
+    links, tables, and forms. For example, the <code>&lt;h1&gt;</code> tag is used for main headings,
+    while the <code>&lt;p&gt;</code> tag is used for paragraphs of text.
+  </p>
 
-    <p>
-      Example of a real HTML-based website:
-      <a href="https://www.w3schools.com/html/" target="_blank">
-        W3Schools HTML Tutorial
-      </a>
-    </p>
-  </div>
+  <p>
+    One of the main strengths of HTML is its simplicity and structure. It does not control how a
+    webpage looks or behaves, but instead focuses on organizing content in a meaningful way.
+    This allows other technologies, such as CSS and JavaScript, to work alongside HTML to enhance
+    design and interactivity.
+  </p>
+
+  <p>
+    HTML is essential for accessibility and search engine optimization (SEO) because it helps
+    screen readers and search engines understand the content of a webpage. Without proper HTML
+    structure, websites would be difficult to navigate and interpret.
+  </p>
+
+  <p>
+    A real-world example of HTML in use can be seen on educational websites such as
+    <a href="https://www.w3schools.com/html/" target="_blank">W3Schools HTML Tutorial</a>,
+    which demonstrates how HTML is used to build webpages from the ground up.
+  </p>
+</div>
+
 
   <!-- CSS -->
-  <div id="css" class="content-box">
-    <h2>What is Cascading Style Sheet?</h2>
+ <div id="css" class="content-box">
+  <h2>What is Cascading Style Sheet?</h2>
 
-    <p>
-      Cascading Style Sheets (CSS) control the visual appearance of HTML elements, including layout,
-      colors, fonts, and spacing.
-    </p>
+  <p>
+    Cascading Style Sheets (CSS) is a language used to control the visual appearance of HTML
+    elements on a webpage. While HTML focuses on structure and content, CSS is responsible for
+    design elements such as colors, fonts, spacing, layouts, and positioning.
+  </p>
 
-    <p>
-      CSS can be applied using inline styles, internal style sheets, or external style sheets.
-    </p>
-  </div>
+  <p>
+    CSS is used to improve the user experience by making webpages visually appealing and easier
+    to read. Without CSS, websites would appear plain and unorganized, using default browser styles.
+    CSS allows developers to maintain consistency across multiple pages and make changes efficiently.
+  </p>
 
-  <!-- JS -->
-  <div id="js" class="content-box">
-    <h2>What is JavaScript?</h2>
+  <h3>CSS Rules and Syntax</h3>
+  <p>
+    A CSS rule consists of a selector and a declaration block. The selector identifies the HTML
+    element being styled, while the declaration defines how it should appear.
+  </p>
 
-    <p>
-      JavaScript is a programming language that adds interactivity and dynamic behavior to webpages.
-      It allows websites to respond to user actions.
-    </p>
-  </div>
+  <pre>
+p {
+  color: blue;
+  font-size: 16px;
+}
+  </pre>
+
+  <h3>Types of CSS</h3>
+
+  <ul>
+    <li><strong>Inline CSS:</strong> Applied directly within an HTML tag.</li>
+    <li><strong>Internal CSS:</strong> Written inside a <code>&lt;style&gt;</code> tag within the HTML document.</li>
+    <li><strong>External CSS:</strong> Stored in a separate .css file and linked to multiple webpages.</li>
+  </ul>
+
+  <p>
+    Example of inline CSS:
+  </p>
+
+  <pre>
+&lt;p style="color:red;"&gt;This text is red&lt;/p&gt;
+  </pre>
+
+  <p>
+    CSS plays a critical role in modern web development by separating content from design,
+    making websites easier to maintain and scale.
+  </p>
+</div>
+  
+  <!--JAVA SCRIPT -->
+  
+<div id="js" class="content-box">
+  <h2>What is JavaScript?</h2>
+
+  <p>
+    JavaScript is a programming language used to add interactivity and dynamic behavior to webpages.
+    Unlike HTML and CSS, which focus on structure and appearance, JavaScript allows websites to
+    respond to user actions such as clicks, form submissions, and keyboard input.
+  </p>
+
+  <p>
+    JavaScript is commonly used to validate forms, display alerts, update content without reloading
+    the page, and create interactive features such as dropdown menus and pop-ups.
+  </p>
+
+  <h3>Ways to Add JavaScript to HTML</h3>
+
+  <p><strong>1. Inline JavaScript</strong></p>
+  <pre>
+&lt;button onclick="alert('Hello!')"&gt;Click Me&lt;/button&gt;
+  </pre>
+
+  <p><strong>2. Internal JavaScript</strong></p>
+  <pre>
+&lt;script&gt;
+  function greet() {
+    alert("Welcome to my webpage!");
+  }
+&lt;/script&gt;
+  </pre>
+
+  <p><strong>3. External JavaScript</strong></p>
+  <pre>
+&lt;script src="script.js"&gt;&lt;/script&gt;
+  </pre>
+
+  <p>
+    External JavaScript is the preferred method for larger projects because it keeps code organized
+    and allows scripts to be reused across multiple webpages.
+  </p>
+</div>
 
   <!-- SURVEY -->
   <div id="survey" class="content-box">
